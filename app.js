@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/tecnologia', function (req, res) {
-    res.send(convertToHtml("Site de tecnologia")); 
+    res.render('sessao/tecnologia');
 });
 
 app.listen(3000, function () {
