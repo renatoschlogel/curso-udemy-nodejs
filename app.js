@@ -8,11 +8,15 @@ function convertToHtml (conteudo){
     return "<html><body>" + conteudo + "</body></html>"
 }
 app.get('/', function (req, res) {
-   res.send(convertToHtml("Site de Noticias")); 
+    res.render('home/index');
 });
 
-app.get('/tecnologia', function (req, res) {
-    res.render('sessao/tecnologia');
+app.get('/formulario_inclusao_noticia', function (req, res) {
+    res.render('admin/form_add_noticia');
+});
+
+app.get('/noticias', function (req, res) {
+    res.render('noticias/noticias');
 });
 
 app.listen(3000, function () {
