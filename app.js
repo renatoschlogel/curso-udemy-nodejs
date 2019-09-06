@@ -1,9 +1,4 @@
-const express = require('express');
-const msg = require('./moduloTeste')();
-const app = express();
-
-app.set('view engine', 'ejs');
-
+let app = require('./config/server');
 
 function convertToHtml (conteudo){
     return "<html><body>" + conteudo + "</body></html>"
@@ -21,5 +16,5 @@ app.get('/noticias', function (req, res) {
 });
 
 app.listen(3000, function () {
-    console.log('Servidor rodando com Express:', msg);
+    console.log('Servidor rodando com Express:');
 });
